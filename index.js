@@ -10,8 +10,8 @@ const userRouter=require('./routes/route')
 const staticRouter=require('./routes/staticroute')
 
 //DATABASE CONNECTION
-connectDB('mongodb://127.0.0.1:27017/shortid');  
-
+connectDB(process.env.MONGO_URI);
+ 
 //MiddleWares
 setupmiddleware(app);
 
